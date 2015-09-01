@@ -1,1 +1,3 @@
-puts "esto es otra cosa totalmente diferente"
+puts "Hola a todos"
+
+puts "Aquí estaremos subiendo varios ejemplos en Ruby"
