@@ -1,3 +1,1 @@
-puts "hola git"
-
-puts "hola desde Ruby"
+puts "esto es otra cosa totalmente diferente"
