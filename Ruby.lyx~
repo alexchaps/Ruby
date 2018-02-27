@@ -1,0 +1,6167 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 25 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{verdeComentarios}{rgb}{0,0.6,0}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{fondoCodigo}{rgb}{0.9333,0.9333,0.9333}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{rojoKeywords}{rgb}{0.7176,0.1098,0.1098}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{azulCadenas}{rgb}{0.0823,0.3960,0.7529}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+contentsname}{Índice}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+chaptername}{Capítulo}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+figurename}{Figura}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+tablename}{Tabla}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{
+\end_layout
+
+\begin_layout Plain Layout
+
+	backgroundcolor=
+\backslash
+color{fondoCodigo},
+\end_layout
+
+\begin_layout Plain Layout
+
+	commentstyle=
+\backslash
+color{verdeComentarios},
+\end_layout
+
+\begin_layout Plain Layout
+
+	language=Ruby,
+\end_layout
+
+\begin_layout Plain Layout
+
+	frame=single,
+\end_layout
+
+\begin_layout Plain Layout
+
+	keywordstyle=
+\backslash
+color{rojoKeywords},
+\end_layout
+
+\begin_layout Plain Layout
+
+	stringstyle=
+\backslash
+color{azulCadenas},
+\end_layout
+
+\begin_layout Plain Layout
+
+	showstringspaces=false
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Ruby
+\end_layout
+
+\begin_layout Author
+Alejandro Chapa Juárez 
+\end_layout
+
+\begin_layout Date
+2018
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introducción.
+\end_layout
+
+\begin_layout Section
+¿Qué es Ruby?
+\end_layout
+
+\begin_layout Standard
+Ruby es un lenguaje de programación de alto nivel interpretado y orientado
+ a objetos que fue creado por el japonés Yukihiro “Matz” Matsumoto en 1993.
+ Matz mezcló partes de sus lenguajes favoritos (Perl, Smalltalk, Eiffel,
+ Ada, y Lisp) para formar un nuevo lenguaje que incorporara tanto la programació
+n funcional como la programación imperativa.
+\end_layout
+
+\begin_layout Standard
+Inicialmente, Matz buscó en otros lenguajes para encontrar la sintaxis ideal.
+ Recordando su búsqueda, dijo, “
+\emph on
+quería un lenguaje que fuera más poderoso que Perl, y más orientado a objetos
+ que Python
+\emph default
+”.
+\end_layout
+
+\begin_layout Standard
+Matz dice que Ruby está diseñado para la productividad y la diversión del
+ desarrollador, siguiendo los principios de una buena interfaz de usuario
+ y basandose en el principio de 
+\emph on
+la menor sorpresa
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Lo primero a mencionar y que es la principal característica de Ruby es que
+ en Ruby todo es un objeto.
+ Absolutamente todo es un objeto, inclusive los números o valores como 
+\emph on
+true
+\emph default
+ o 
+\emph on
+false
+\emph default
+ son objetos.
+ 
+\end_layout
+
+\begin_layout Section
+Algunas características.
+\end_layout
+
+\begin_layout Standard
+Algunas de las principales características de este lenguaje las vamos a
+ listar a continuación:
+\end_layout
+
+\begin_layout Itemize
+Las funciones son métodos
+\end_layout
+
+\begin_layout Itemize
+Las variables siempre son referencias a objetos
+\end_layout
+
+\begin_layout Itemize
+No requiere declaración de variables
+\end_layout
+
+\begin_layout Itemize
+Todo tiene un valor
+\end_layout
+
+\begin_layout Itemize
+Existen iteradores
+\end_layout
+
+\begin_layout Itemize
+Manejo de expresiones regulares
+\end_layout
+
+\begin_layout Itemize
+Ruby soporta herencia, pero no multiherencia
+\end_layout
+
+\begin_layout Itemize
+Ruby tiene variables locales, de clase, de instancia y globales
+\end_layout
+
+\begin_layout Itemize
+Existe manejo de excepciones
+\end_layout
+
+\begin_layout Itemize
+Manejo de hilos y multihilos, independiente al sistema operativo
+\end_layout
+
+\begin_layout Itemize
+Soporta alteración de objetos en tiempo de ejecución
+\end_layout
+
+\begin_layout Itemize
+La identación no es significativa, los saltos de linea sí
+\end_layout
+
+\begin_layout Itemize
+Facilmente portable
+\end_layout
+
+\begin_layout Itemize
+Fácil de aprender, poderoso y moderno
+\end_layout
+
+\begin_layout Itemize
+Multiparadigma
+\end_layout
+
+\begin_layout Itemize
+Sensible a mayúsculas
+\end_layout
+
+\begin_layout Itemize
+Cuenta con un recolector de basura
+\end_layout
+
+\begin_layout Section
+¿Por qué usar Ruby?
+\end_layout
+
+\begin_layout Standard
+Ruby es un lenguaje de programación dinámico y de código abierto enfocado
+ en la simplicidad y productividad.
+ Su elegante sintaxis se siente natural al leerla y fácil al escribirla.
+\end_layout
+
+\begin_layout Standard
+Ruby incorpora algunas de las mejores características de lenguajes como
+ Java y Perl, además se promueven las mejores practicas de programación
+ sin perder la usabilidad.
+ Dinámico e interpretado a la vez.
+\end_layout
+
+\begin_layout Standard
+Simplifica declaraciones, modelos, estructuras sin perder potencia y permite
+ a los programadores que se desarrollen de forma adecuada.
+ Es altamente extensible, a través de librerías escritas en Ruby, las famosas
+ 
+\emph on
+gemas.
+\end_layout
+
+\begin_layout Standard
+Su alcance parece ilimitado y en la actualidad se utiliza en diversas aplicacion
+es, desde desarrollo web (
+\emph on
+R
+\emph default
+uby 
+\emph on
+on Rails
+\emph default
+) hasta la simulación de diversos ambientes.
+\end_layout
+
+\begin_layout Standard
+Por ser un lenguaje multiplataforma se integra perfectamente con diversas
+ arquitecturas, incluso en nuestros dispositivos móviles.
+\end_layout
+
+\begin_layout Standard
+Estas son algunas de las razones por las que amamos Ruby.
+\end_layout
+
+\begin_layout Section
+Primeros pasos.
+\end_layout
+
+\begin_layout Standard
+Ruby, como ya hicimos mención, es un lenguaje interpretado.
+ Así que necesitamos de un intérprete para poder crear magia con este lenguaje.
+ Para lograr nuestro objetivo haremos uso de IRB (
+\emph on
+Interactive Ruby
+\emph default
+) el cuál podemos descargar de su página oficial dando clic 
+\begin_inset CommandInset href
+LatexCommand href
+name "aquí"
+target "https://www.ruby-lang.org/es/downloads/"
+
+\end_inset
+
+.
+ Aquí encontraremos las diversas versiones de Ruby que podemos utilizar
+ y vienen las diferentes plataformas en las cuales podremos trabajar.
+\end_layout
+
+\begin_layout Standard
+La documentación oficial del lenguaje la puedes encontrar en el siguiente
+ link 
+\begin_inset CommandInset href
+LatexCommand href
+name "Documentación Ruby"
+target "https://www.ruby-lang.org/es/documentation/"
+
+\end_inset
+
+ o en esta otra página 
+\begin_inset CommandInset href
+LatexCommand href
+name "Ruby-Doc"
+target "http://ruby-doc.org/"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como recomendación podemos usar adicionalmente un editor de texto plano
+ para poder crear nuestros 
+\emph on
+scripts
+\emph default
+ en Ruby.
+ Nuestros archivos deberán tener la extensión 
+\emph on
+.rb 
+\emph default
+la cual hace referencia a que su contenido contiene sentencias en Ruby.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Ruby.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bienvenido a Ruby
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Hola mundo.
+ Hola Ruby.
+\end_layout
+
+\begin_layout Standard
+Vamos a comenzar con nuestro primer script.
+ Haremos el famoso y obligado 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Hola mundo
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Abramos un archivo nuevo y pongamosle de nombre 
+\emph on
+hola.rb
+\emph default
+, el cual tendrá las siguiente lineas como contenido:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+print "Hola mundo..."
+\end_layout
+
+\begin_layout Plain Layout
+
+puts "Hola Ruby..."
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora en nuestra terminal vamos a escribir 
+\emph on
+ruby hola.rb
+\emph default
+ con lo cual tendremos una salida como la siguiente:
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Hola mundo...Hola Ruby...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+¡Felicidades! Usted ha creado su primer script en Ruby.
+ Como te habrás dado cuenta usamos dos sentencias que parecen realizar lo
+ mismo, 
+\emph on
+print 
+\emph default
+y 
+\emph on
+puts
+\emph default
+, pero esto no es así.
+
+\emph on
+ 
+\emph default
+La principal diferencia que hay entre las dos sentencias que usamos es que
+ puts da un salto de linea al final.
+ Ahora cambia el orden, usa primero puts y después print.
+ Verifica que el resultado es ahora distinto.
+\end_layout
+
+\begin_layout Section
+Tipos básicos.
+\end_layout
+
+\begin_layout Standard
+Como ya habíamos mencionado, en Ruby todo es un objeto.
+ Así que como tal no existen tipos básicos, si no más bien clases.
+ Aún así vamos a checar un poco sobre los objetos más simples, tales como
+ cadenas y números.
+\end_layout
+
+\begin_layout Standard
+Empecemos con los números...
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Esto es un comentario
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Los números enteros son como los conocemos
+\end_layout
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\begin_layout Plain Layout
+
+192323
+\end_layout
+
+\begin_layout Plain Layout
+
+-500
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Podemos usar un separador para poder leerlo más fácil
+\end_layout
+
+\begin_layout Plain Layout
+
+1000 #Es igual a 1000
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Tenemos números en binario, octal y hexadecimal
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0b1111_1111 #255 en binario
+\end_layout
+
+\begin_layout Plain Layout
+
+0377 #255 en octal
+\end_layout
+
+\begin_layout Plain Layout
+
+0xFF #255 en hexadecimal
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos un poco de aritmética en Ruby.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts 5+2 #Nos dará como resultado 7
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5-2 #Nos dará como resultado 3
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5*2 #Nos dará como resultado 10
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5/2 #Nos dará como resultado 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las divisiones entre números enteros, nos darán por resultado un número
+ entero.
+ Si queremos que el resultado tenga decimales debemos usar números flotantes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts 5.0/2
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5/2.0
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5.0/2.0
+\end_layout
+
+\begin_layout Plain Layout
+
+#Las tres operaciones nos devuelve 2.5
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Un poco más sobre números flotantes
+\end_layout
+
+\begin_layout Plain Layout
+
+0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+-1.234
+\end_layout
+
+\begin_layout Plain Layout
+
+3.23e13 #Esto es 3.23x10^13
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.2 #Atención! 
+\end_layout
+
+\begin_layout Plain Layout
+
+#Esto no se puede hacer, debemos poner explícitamente 0.2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+También contamos con el operador módulo.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts 5 % 2 #Regresará 1
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5 % -2 #Regresará -1
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 1.6 % 0.3 
+\end_layout
+
+\begin_layout Plain Layout
+
+#Regresará 0.1, también se pueden usar números flotantes 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+También tenemos exponenciación en Ruby.
+ Veamos algunos ejemplos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x**2 #Es x*x
+\end_layout
+
+\begin_layout Plain Layout
+
+x**-1 #Es 1/x
+\end_layout
+
+\begin_layout Plain Layout
+
+x**(1/2) #Esto no es raiz cuadrada recordemos que
+\end_layout
+
+\begin_layout Plain Layout
+
+#la división de 2 números enteros regresa otro entero
+\end_layout
+
+\begin_layout Plain Layout
+
+x**(1.0/2) #Esto sí es una raíz cuadrada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En Ruby existen problemas con los números racionales y flotantes, debido
+ al redondeo que se utiliza.
+ Así que lo más recomendable es usar números racionales.
+ Verifiquemos esto con un pequeño ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts 1.5-1.1==0.4 #Nos regresará false
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 4.0/10==0.4 #Nos devolverá true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los números enteros en Ruby pertenecen a la clase Fixnum, cuando son números
+ pequeños.
+ Y Bignum cuando son números grandes.
+ Los flotantes pertenecen a la clase Float.
+ Esto lo podremos comprobar facilmente, al ser los números objetos en Ruby,
+ tienen un método con el cual podremos ver a que clase pertenecen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts 1.class 
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 1.5.class
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename NumericRB.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Clases númericas en Ruby
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por último, los números son objetos inmutables, no existen métodos que puedan
+ cambiar su valor.
+ Dejemos en paz un momento a los números, ahora veamos un poco sobre cadenas.
+ 
+\end_layout
+
+\begin_layout Standard
+En Ruby podemos escribir cadenas con doble comilla 
+\begin_inset Quotes eld
+\end_inset
+
+ o con comilla simple '.
+ Veamos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts "Esto es una cadena"
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 'Esto también es una cadena'
+\end_layout
+
+\begin_layout Plain Layout
+
+puts "cadena".class
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 'cadena'.class
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como pudimos observar, ambas cadenas pertenecen a la clase String.
+ Ahora veamos lo siguiente, si una cadena la escribimos usando este símbolo
+ `, nuestro intérprete lo reconoce como un comando del sistema, y por ende
+ lo ejecutará y nos arrojará un resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts `ls` #Ejecutará el comando ls en Linux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En Ruby existe algo llamado interpolación, el cual es el proceso de insertar
+ el resultado de una expresión dentro de una cadena.
+ La interpolación solo se puede realizar utilizando comillas dobles y se
+ realiza de la siguiente forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts 3*2=#{3*2} #Nos imprimirá 3*2=6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las cadenas se pueden concatenar y en Ruby se hace de una manera muy sencilla,
+ solo debemos usar el operador +.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts "Hola"+" "+'mundo' #Nos devolvera Hola mundo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vamos a dejar las cadenas hasta aquí, mas adelante las abordaremos con mayor
+ profundidad.
+\end_layout
+
+\begin_layout Section
+Variables.
+\end_layout
+
+\begin_layout Standard
+Las variables las usamos para poder guardar valores que queremos usar posteriorm
+ente para hacer cálculos u otras cosas.
+ Una variable puede tener casi cualquier nombre, siempre y cuando no sea
+ alguna palabra reservada.
+ A continuación te dejo una lista de las palabras reservadas que existen
+ en Ruby y cuál es la función de cada una.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="25" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="50text%">
+<column alignment="center" valignment="middle" width="50text%">
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Palabra
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Función
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+alias
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crea un alias para un operador, método o variable global que ya exista.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+and
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador lógico, igual a && pero con menor precedencia.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+break
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Finaliza un while o un until loop, o un método dentro de un bloque.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+case
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compara una expresión con una clausula when correspondiente.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+class
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Define una clase; se cierra con end.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+def
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inicia la definición de un método; se cierra con end.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+defined?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Determina si un método, una variable o un bloque existe.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+do
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comienza un bloque; se cierra con end.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+else
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta el código que continua si la condición previa no es true.
+ Funciona con if, elsif, unless o case.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+elsif
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta el código que continua si la condicional previa no es true.
+ Funciona con if o elsif.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+end
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Finaliza un bloque de código.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+ensure
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta la terminación de un bloque.
+ Se usa detrás del ultimo rescue.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+false
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lógico o Booleano false.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+true
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lógico o Booleano true.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+for
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comienza un loop for.
+ Se usa con in.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+if
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta un bloque de código si la declaración condicional es true.
+ Se cierra con end.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+in
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Usado con el loop for.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+module
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Define un modulo.
+ Se cierra con end.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+next
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Salta al punto inmediatamente después de la evaluación del loop condicional.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+nil
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vacio, no inicializado, invalido.
+ No es igual a cero.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+not
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador lógico, igual como !.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+or
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador lógico, igual a // pero con menor precedencia.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+redo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Salta después de un loop condicional.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+rescue
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Evalua una expresión después de una excepción es alzada.
+ Usada después de ensure.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Palabras reservadas en Ruby
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="50text%">
+<column alignment="center" valignment="top" width="50text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+retry
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cuando es llamada fuera de rescue, repite una llamada a método.
+ Dentro de rescue salta a un bloque superior.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+return
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Regresa un valor de un método o un bloque.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+self
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objeto contemporáneo.
+ Alude al objeto mismo.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+super
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Llamada a método del mismo nombre en la superclase.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+then
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Separador usado con if, unless, when, case, y rescue.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+undef
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Crea un método indefinido en la clase contemporánea.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+unless
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta un bloque de código si la declaración condicional es false.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+until
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta un bloque de código mientras la declaración condicional es false.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+when
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inicia una clausula debajo de under.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+while
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta un bloque de código mientras la declaración condicional es true.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+yield
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ejecuta un bloque pasado a un método.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+_FILE_
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre del archivo de origen contemporáneo.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+_LINE_
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Numero de la linea contemporánea en el archivo de origen contemporáneo.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Más palabras reservadas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bastantes palabras, ya iremos revisando la gran mayoría de ellas.
+ Ahora regresando a las variables, existen diversos tipos dependiendo de
+ su alcance y su entorno, ahorita nos enfocaremos en las 
+\emph on
+variables locales
+\emph default
+.
+ Las variables locales en Ruby deben empezar con letra minúscula o un guión
+ bajo y deben estar formada por letras, números o guiones bajos.
+\end_layout
+
+\begin_layout Standard
+En Ruby existe algo llamado interpretación dinámica lo cual significa que
+ cuando declaramos nuestras variables no debemos de especificar el tipo
+ del cual será.
+\end_layout
+
+\begin_layout Subsection
+Asignación.
+\end_layout
+
+\begin_layout Standard
+A las variables se les necesita asignar un valor.
+ Para asignar un valor a una variable usamos el operador igual (=).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a=1
+\end_layout
+
+\begin_layout Plain Layout
+
+b=2
+\end_layout
+
+\begin_layout Plain Layout
+
+c=a+b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+También podemos combinarlo con otros operadores como +, -.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x+=2 #Incrementa x.
+ En Ruby no existe ++
+\end_layout
+
+\begin_layout Plain Layout
+
+y-=2 #Decrementa y.
+ Tampoco existe --
+\end_layout
+
+\begin_layout Plain Layout
+
+z*=3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A esto que hicimos arriba se le llama asignaciones abreviadas, a continuación
+ te dejo una tabla con varias de ellas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="50text%">
+<column alignment="center" valignment="top" width="50text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Asignación abreviada
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Significado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x+=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x + y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x-=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x - y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x*=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x * y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x/=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x / y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x%=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x % y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x**=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x ** y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x&&=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x && y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x||=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x || y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x&=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x & y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x|=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x | y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x^=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x ^ y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x<<=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x << y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x>>=y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x = x >> y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Asignaciones abreviadas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ruby también soporta asignación paralela.
+ Veamos algunos ejemplos
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x,y=1,2 #x=1 y=2
+\end_layout
+
+\begin_layout Plain Layout
+
+x,y=y,x #x=y y=x
+\end_layout
+
+\begin_layout Plain Layout
+
+a,b,c=[1,"hola",true] #a=1 b="hola" c=true
+\end_layout
+
+\begin_layout Plain Layout
+
+x=9,8,7 # x=[9,8,7]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si ponemos más variables que valores a asignar, sucede lo siguiente:
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x,y,z=1,2 # x=1 y=2 z=nil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y si ponemos mas valores que variables:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x,y=5,6,7 # x=5 y=6  El 7 es descartado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con la asignación paralela también podemos hacer esto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x,(y,z)=1,2 # x=1 y,z=2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Así mismo por la interpretación dinámica, una variable en Ruby puede tener
+ distintos valores y pueden ser objetos de direfentes tipos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x=5
+\end_layout
+
+\begin_layout Plain Layout
+
+x="cinco"
+\end_layout
+
+\begin_layout Plain Layout
+
+x= 5.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Constantes.
+\end_layout
+
+\begin_layout Standard
+Las constantes son referencias inmutables a un objeto, estas son creadas
+ cuando son asignadas por primera vez.
+ Las constantes en Ruby se deben poner con letras mayúsculas.
+ Si se intenta cambiar su valor en algún momento, el intérprete nos mandará
+ una advertencia, pero no marcará error.
+ Veamos algunos ejemplos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+PI=3.14159
+\end_layout
+
+\begin_layout Plain Layout
+
+E=2.7182
+\end_layout
+
+\begin_layout Plain Layout
+
+PI=3.1416 #Esto no marca error pero sí genera un warning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+True, false and nil.
+\end_layout
+
+\begin_layout Standard
+Antes de empezar a trabajar con los condicionales vamos a revisar los valores
+ de 
+\emph on
+true
+\emph default
+, 
+\emph on
+false
+\emph default
+ y 
+\emph on
+nil
+\emph default
+.
+ En realidad estos valores son instancias de las clases TrueClass, FalseClass
+ y NilClass respectivamente.
+ No existe la clase booleana en Ruby.
+ 
+\end_layout
+
+\begin_layout Standard
+Nil se usa para indicar ausencia de valor, es la versión de null en Ruby.
+ Debe quedar muy claro que true no es 1, que false y nil no es 0.
+ Nil se comporta como false.
+ Y cualquier cosa que no sea nil o false será true.
+ 
+\end_layout
+
+\begin_layout Section
+Operadores de comparación, de igualdad y booleanos.
+\end_layout
+
+\begin_layout Standard
+Empecemos con los operadores de comparación.
+ En ruby existen los siguientes:
+\end_layout
+
+\begin_layout Itemize
+Mayor que >
+\end_layout
+
+\begin_layout Itemize
+Menor que <
+\end_layout
+
+\begin_layout Itemize
+Mayor o igual que >=
+\end_layout
+
+\begin_layout Itemize
+Menor o igual que <=
+\end_layout
+
+\begin_layout Itemize
+<=>
+\end_layout
+
+\begin_layout Standard
+Los primeros cuatro operadores regresan true si se cumple la comparación,
+ en caso contrario devuelve falso.
+ El último operador actúa de modo diferente.
+ Si el operando del lado izquierdo es menor que el del lado derecho, regresa
+ -1.
+ Si el operador de la izquierda es más grande que el de la derecha retorna
+ 1.
+ En caso de que ambos sean iguales devuelve 0.
+\end_layout
+
+\begin_layout Standard
+Veamos algunos ejemplos de todos estos operadores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts 6>5 # true
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 6<5 # false
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 6>=5 # true
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 6<=5 # false
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 6<=>5 # Regresa 1
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5<=>6 # Regresa -1
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 5<=>5 # Regresa 0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cuanto a los operadores de igualdad tenemos los siguientes:
+\end_layout
+
+\begin_layout Itemize
+Igual ==
+\end_layout
+
+\begin_layout Itemize
+Difente !=
+\end_layout
+
+\begin_layout Standard
+Estos operadores regresan true si se cumple la igualdad o false en caso
+ contrario.
+ Veamos un ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a=5
+\end_layout
+
+\begin_layout Plain Layout
+
+b=5
+\end_layout
+
+\begin_layout Plain Layout
+
+c=6
+\end_layout
+
+\begin_layout Plain Layout
+
+puts a==b # true
+\end_layout
+
+\begin_layout Plain Layout
+
+puts a==c # false
+\end_layout
+
+\begin_layout Plain Layout
+
+puts a!=b # false
+\end_layout
+
+\begin_layout Plain Layout
+
+puts b!=c # true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora revisemos los operadores booleanos, dentro de los cuales tendremos
+ los siguientes:
+\end_layout
+
+\begin_layout Itemize
+&&
+\end_layout
+
+\begin_layout Itemize
+||
+\end_layout
+
+\begin_layout Itemize
+!
+\end_layout
+
+\begin_layout Itemize
+and
+\end_layout
+
+\begin_layout Itemize
+or
+\end_layout
+
+\begin_layout Itemize
+not
+\end_layout
+
+\begin_layout Standard
+&& y and realizan la operación booleana AND.
+ || y or realizan la operación OR.
+ ! y not realizan la operación NOT.
+ &&, || y ! tienen mayor precedencia que and, or y not, pero se usan para
+ tener una mayor legibilidad en el código.
+\end_layout
+
+\begin_layout Section
+Arreglos.
+\end_layout
+
+\begin_layout Standard
+Un arreglo es una secuencia ordenada de valores a la cuál podemos acceder
+ a través de su posición o índice.
+ El pirmer valor de un arreglo tiene el índice 0.
+ Si nosotros preguntamos la longitud o el tamaño de nuestro arreglo, Ruby
+ nos dirá el número de elementos que hay en el arreglo.
+ 
+\end_layout
+
+\begin_layout Standard
+Ahora, si nosotros tratamos de acceder a índices negativos, Ruby nos dará
+ los últimos elementos del arreglo.
+ Es decir, si nosotros le pedimos el elemento -1, Ruby nos devolverá el
+ último elemento del arreglo, si le pedimos el -2 nos dará el penúltimo.
+ Si tratamos de acceder a un índice que no existe, Ruby regresará nil.
+\end_layout
+
+\begin_layout Standard
+Los arreglos en Ruby son mutables y también sus elementos pueden ser de
+ distintas clases (tipos).
+ Veamos algunos ejemplos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Declaración de arreglos
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[] #Este es un arreglo vació
+\end_layout
+
+\begin_layout Plain Layout
+
+[1,2,3] #Un arreglo con 3 elementos
+\end_layout
+
+\begin_layout Plain Layout
+
+[1,2.3,"abc",false,[0,5,10]] #Arreglo con distintos tipos de objetos
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Elementos de un arreglo
+\end_layout
+
+\begin_layout Plain Layout
+
+arreglo=[5,8,13,21,[34,55],89]
+\end_layout
+
+\begin_layout Plain Layout
+
+puts arreglo[0] #Imprime 5
+\end_layout
+
+\begin_layout Plain Layout
+
+puts arreglo[3] #Imprime 21
+\end_layout
+
+\begin_layout Plain Layout
+
+puts arreglo[-1] #Imprime 89
+\end_layout
+
+\begin_layout Plain Layout
+
+puts arreglo[4] #Imprime 34 y 55
+\end_layout
+
+\begin_layout Plain Layout
+
+puts arreglo[4][0] #Imprime 34
+\end_layout
+
+\begin_layout Plain Layout
+
+puts arreglo[-7] 
+\end_layout
+
+\begin_layout Plain Layout
+
+#Regresa nil, no se puede acceder a un elemento antes del arreglo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Revisemos algunas otras cosas que podemos hacer con los arreglos, como formas
+ de inicializar, de acceder a sus elementos, de agregar y sustituir elementos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Algunas otras formas de inicializar arreglos
+\end_layout
+
+\begin_layout Plain Layout
+
+vacio=Array.new() 
+\end_layout
+
+\begin_layout Plain Layout
+
+#Creamos un objeto de la clase arreglo, es equivalente a []
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puroNil=Array.new(2) #Un arreglo de la forma [nil,nil]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+otro=Array.new(2,1) #Un arreglo de esta forma [1,1]
+\end_layout
+
+\begin_layout Plain Layout
+
+otro2=Array.new(otro) #Realiza una copia del arreglo otro
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+arreglo=Array.new(4){|x| x+1} 
+\end_layout
+
+\begin_layout Plain Layout
+
+#4 elementos con x de 0 a 3 y x+1.
+ Devuelve este arreglo[1,2,3,4] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a=[1,2,3,4,5]
+\end_layout
+
+\begin_layout Plain Layout
+
+puts a[a.size-1] #Devuelve el último elemento del arreglo
+\end_layout
+
+\begin_layout Plain Layout
+
+puts a[-a.size] #Devuelve el primer elemento del arreglo.
+\end_layout
+
+\begin_layout Plain Layout
+
+puts a[0]="uno" #El arreglo queda a=["uno",2,3,4,5]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a[-6]=0 #Esto no se puede 
+\end_layout
+
+\begin_layout Plain Layout
+
+#no se puede asignar antes del primer elemento del arreglo.
+\end_layout
+
+\begin_layout Plain Layout
+
+a[7]=8 #El arreglo queda a=["uno",2,3,4,5,nil,nil,8]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En Ruby existen operaciones con arreglos, vamos a revisar.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a=[1,2,3]+["cuatro","cinco"] #a=[1,2,3,"cuatro","cinco"]
+\end_layout
+
+\begin_layout Plain Layout
+
+a=a+[6,[7,8]] #a=[1,2,3,"cuatro","cinco",6,[7,8]]
+\end_layout
+
+\begin_layout Plain Layout
+
+a=a+9 #Es un error
+\end_layout
+
+\begin_layout Plain Layout
+
+#solo sirve con arreglos.
+ Así tendría que ser a=a+[9]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a=['a','b','c','d','e'] - ['a','c','e'] 
+\end_layout
+
+\begin_layout Plain Layout
+
+#Dara como resultado a=['b','d']
+\end_layout
+
+\begin_layout Plain Layout
+
+#Cuando hacemos la resta solo se quitan los elementos repetidos
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Para agregar elementos al final del arreglo podemos usar el operador <<
+\end_layout
+
+\begin_layout Plain Layout
+
+a=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+a<<1 #a=[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+a<<[2,3] #a=[1,[2,3]]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a=[0]*3 #a=[0,0,0]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#También podemos utilizar los operadores & y |
+\end_layout
+
+\begin_layout Plain Layout
+
+#Estos tratarán a los arreglos como si fueran conjuntos
+\end_layout
+
+\begin_layout Plain Layout
+
+#Haran las operaciones de unión e intersección respectivamente.
+\end_layout
+
+\begin_layout Plain Layout
+
+a=[1,2,2,3,3,3,4,4,4,4]
+\end_layout
+
+\begin_layout Plain Layout
+
+b=[5,5,5,5,5,6,6,6,6,6,6,2]
+\end_layout
+
+\begin_layout Plain Layout
+
+a|b #[1,2,3,4,5,6]
+\end_layout
+
+\begin_layout Plain Layout
+
+b|a #[5,6,2,1,3,4] mismos elementos, diferente orden
+\end_layout
+
+\begin_layout Plain Layout
+
+a&b #[2]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además de todos estos métodos y operaciones con arreglos, existen otros
+ que son aún más poderosos y más útiles por ser los más usados.
+ Revisemos este último ejemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Si queremos recorrer todo el arreglo, lo podemos hacer a través del método
+ each
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a=[1,2,3,4,5]
+\end_layout
+
+\begin_layout Plain Layout
+
+a.each do |numero|
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts numero*2
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprimira el doble de todos los números del arreglo
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a.each {|n| puts n*2} #Otra forma
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a.length #Devuelve la cantidad de elementos que hay en el arreglo
+\end_layout
+
+\begin_layout Plain Layout
+
+a.first #Devuelve el primer elemento
+\end_layout
+
+\begin_layout Plain Layout
+
+a.last #Devuelve el último elemento
+\end_layout
+
+\begin_layout Plain Layout
+
+a.delete(4) #Borra el 4
+\end_layout
+
+\begin_layout Plain Layout
+
+#quedando el arreglo a=[1,2,3,5]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a.sort #Ordena los elementos del arreglo
+\end_layout
+
+\begin_layout Plain Layout
+
+#Si queremos que el arreglo se modifique debemos agregar un ! al final.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+#Es decir, a.sort!
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Esto es muy util cuando trabajamos con arreglos de cadenas
+\end_layout
+
+\begin_layout Plain Layout
+
+paises=%w(Mexico Brasil Argentina Colombia Venezuela) 
+\end_layout
+
+\begin_layout Plain Layout
+
+#Convierte cada palabra a un elemento del arreglo
+\end_layout
+
+\begin_layout Plain Layout
+
+#paises=["Mexico","Brasil","Argentina","Colombia","Venezuela"]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Hashes.
+\end_layout
+
+\begin_layout Standard
+Los 
+\emph on
+hashes
+\emph default
+ son conocidos como diccionarios, arreglos asociativos, mapas.
+ Son objetos que tienen una 
+\emph on
+llave 
+\emph default
+(
+\emph on
+key
+\emph default
+) y un 
+\emph on
+valor
+\emph default
+.
+ Veamos como son los hashes en Ruby.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Para crear un Hash, se crea un objeto de tipo Hash
+\end_layout
+
+\begin_layout Plain Layout
+
+frutas = Hash.new
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Para agregar un elemento
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+frutas['platano'] = 'amarillo' 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#En donde 'platano' es la llave y 'verde' es el valor
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Para acceder a su valor
+\end_layout
+
+\begin_layout Plain Layout
+
+puts frutas['platano'] #Imprime 'amarillo'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existen otras formas de crear hashes ya con elementos inicializados.
+ Para poder hacer esto debemos de poner los elementos del hash entre llaves
+ {} y debemos de asignar los valores del siguiente modo: llave=>valor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+numeros = {"uno"=>1,"dos"=>2,"tres"=>3}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts numeros["dos"] #Imprime 2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Y podemos seguir agregando elementos al hash
+\end_layout
+
+\begin_layout Plain Layout
+
+numeros["cuatro"]=4
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts numeros["cuatro"] #Imprime 4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es importante indicar que nuestros valores del Hash pueden ser de cualquier
+ tipo, podemos tener números, cadenas, incluso podemos tener arreglos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+alumno={"nombre"=>"Alex", "calificacion"=>[10,7,9]}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts alumno["calificacion"]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Comparados con los arrays, tenemos una ventaja significativa: se puede usar
+ cualquier objeto como índice.
+ Sin embargo, sus elementos no están ordenados.
+ Los hashes tienen un valor por defecto.
+ Este valor se devuelve cuando se usan índices que no existen: el valor
+ que se devuelve por defecto es 
+\emph on
+nil
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Símbolos.
+\end_layout
+
+\begin_layout Standard
+Los 
+\emph on
+Símbolos
+\emph default
+ son muy utilizados al manejar hashes.
+ Pero, ¿qué es un símbolo? Un símbolo es una etiqueta, un nombre, un indicador.
+ Los símbolos son los objetos más básicos que pueden existir en Ruby.
+ Una vez que son creados siempre tendrán el mismo 
+\emph on
+object_id
+\emph default
+ durante todo el programa.
+ Esto vuelve a los símbolos más eficientes que las cadenas, ya que cuando
+ tu creas dos cadenas con el mismo nombre, en realidad estás creando dos
+ objetos distintos.
+ Esto implica ahorro de memoria y de tiempo.
+\end_layout
+
+\begin_layout Standard
+Los símbolos son escritos con dos puntos (:) seguido del nombre que tendrá
+ el símbolo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Diferentes object_id
+\end_layout
+
+\begin_layout Plain Layout
+
+puts "cadena".object_id
+\end_layout
+
+\begin_layout Plain Layout
+
+puts "cadena".object_id
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Igual object_id
+\end_layout
+
+\begin_layout Plain Layout
+
+puts :cadena.object_id
+\end_layout
+
+\begin_layout Plain Layout
+
+puts :cadena.object_id
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+¿Cuándo debemos usar un string y cuándo un símbolo? Si el contenido de nuestro
+ objeto es importante, te recomiendo usar cadena.
+ En cambio, si lo importante de tu objeto es la identidad, usa símbolos.
+ 
+\end_layout
+
+\begin_layout Standard
+Ruby utiliza internamente una tabla de símbolos, en donde están los nombres
+ de nuestras variables, objetos, métodos, clases, etc.
+ Por ejemplo si creamos una función con el nombre sumarImpuesto, se creará
+ automáticamente el símbolo :sumarImpuesto.
+ Si queremos ver nuestra tabla de símbolos, debemos ejecutar la siguiente
+ sentencia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts Symbol.all_symbols
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+¿Como utilizamos símbolos en nuestros objetos Hash?
+\end_layout
+
+\begin_layout Standard
+Se recomienda utilizar los símbolos como las keys de nuestros hash.
+ En los objetos hash, las keys que nosotros colocamos no se deben de repetir,
+ deben de ser únicas.
+ Es por esto mismo que es recomendable utilizar símbolos como llaves.
+ Veamos con un ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+persona={:nombre="Alejandro", :edad=23}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts persona[:nombre]
+\end_layout
+
+\begin_layout Plain Layout
+
+puts persona[:edad]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rangos.
+\end_layout
+
+\begin_layout Standard
+Los rangos son objetos que representan una serie de valores definidos entre
+ dos limites.
+ Un valor inicial y un valor final.
+ 
+\end_layout
+
+\begin_layout Standard
+Los rangos son escritos usando dos puntos (..) o tres puntos (...) dependiendo
+ de la cantidad de valores que queremos abarcar.
+ Usamos dos puntos cuando queremos que el rango sea inclusivo, es decir,
+ que el valor final sea incluído.
+ Y cuando queremos que sea un rango exclusivo, es decir que el limite superior
+ no este incluído, usaremos tres puntos.
+ 
+\end_layout
+
+\begin_layout Standard
+Veamos algunos ejemplos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Rango inclusivo
+\end_layout
+
+\begin_layout Plain Layout
+
+#Mostrará del 1 al 20
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 1..20
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Rango exclusivo
+\end_layout
+
+\begin_layout Plain Layout
+
+#Mostrará del 1 al 19
+\end_layout
+
+\begin_layout Plain Layout
+
+puts 1...20
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los rangos nos sirven principalmente para expresar una secuencia.
+ Es importante hacer notar que en Ruby los rangos no son almacenados como
+ una lista, los rangos son objetos de tipo 
+\emph on
+Range.
+ 
+\end_layout
+
+\begin_layout Standard
+Sin embargo podemos convertir estos rangos en un arreglo, mediante el uso
+ del método 
+\series bold
+\emph on
+to_a
+\series default
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(1..4).to_a #Devolvera [1,2,3,4]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+También los rangos son utilizados para saber si un elemento pertence a dicho
+ rango, para eso tenemos el método 
+\emph on
+include? 
+\emph default
+que nos devolverá true si el valor esta dentro del rango.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+edadValida=18..40
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts edadValida.include?(20)
+\end_layout
+
+\begin_layout Plain Layout
+
+#Regresa true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El principal uso de los rangos es la comparación.
+ Saber si un valor esta dentro o fuera del rango establecido.
+ Otro uso de los rangos es la iteración, los rangos pueden usar los metodos
+ 
+\series bold
+\shape italic
+each
+\series default
+\shape default
+, 
+\series bold
+\shape italic
+step
+\series default
+\shape default
+ y los métodos definidos en la clase Enumerable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#También se pueden crear rangos con caracteres
+\end_layout
+
+\begin_layout Plain Layout
+
+rango = 'a'..'g'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rango.to_a 
+\end_layout
+
+\begin_layout Plain Layout
+
+#El rango se convierte en
+\end_layout
+
+\begin_layout Plain Layout
+
+#['a','b','c','d','e','f','g']
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rango.each{ |letra|
+\end_layout
+
+\begin_layout Plain Layout
+
+	print "#{letra} "
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Imprime "a b c d e f g "
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rango.step(3){|letra|
+\end_layout
+
+\begin_layout Plain Layout
+
+	print "#{letra} "
+\end_layout
+
+\begin_layout Plain Layout
+
+	#Imprime "a d g"
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El ejemplo anterior es posible debido a que la clase String tiene definido
+ un método llamado 
+\series bold
+\emph on
+succ
+\series default
+\emph default
+ el cual permite que podamos iterar y avanzar entre cada uno de los elementos
+ que conforman el rango.
+\end_layout
+
+\begin_layout Section
+Leer datos del usuario
+\end_layout
+
+\begin_layout Standard
+Para poder recibir datos del usuario mediante el teclado utilizaremos el
+ método llamado 
+\series bold
+\shape italic
+gets, 
+\series default
+\shape default
+el cual nos permitirá recibir los datos que el usuario ingrese.
+ Gets almacena todo lo que el usuario escriba en el teclado, incluso el
+ caracter de retorno de carro con salto de línea ('
+\backslash
+n').
+ Para poder quitar ese último caracter, deberemos combinar el método gets
+ con el método 
+\series bold
+\shape italic
+chomp
+\series default
+\shape default
+.
+ Chomp es un método para cadena que borra el salto de linea excedente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts "Ingresa tu nombre"
+\end_layout
+
+\begin_layout Plain Layout
+
+nombre = gets.chomp
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts "Hola #{nombre}"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprimira "Hola" y el nombre que ingreso el usuario
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Estructuras de control y bucles.
+\end_layout
+
+\begin_layout Standard
+Revisemos las diferentes estructuras de control y bucles (loops) que podemos
+ usar en Ruby, veremos que en este lenguaje tenemos una gran variedad de
+ opciones que podemos usar para realizar nuestros scripts, algunos son muy
+ poderosos y todo dependerá de lo que queramos realizar.
+\end_layout
+
+\begin_layout Section
+Condicionales.
+\end_layout
+
+\begin_layout Standard
+Dentro de este rubro contamos con 
+\emph on
+if
+\emph default
+, 
+\emph on
+unless
+\emph default
+ y 
+\emph on
+case
+\emph default
+.
+ Así como el operador ternario (
+\emph on
+?
+\emph default
+).
+ Empecemos con el más básico de ellos.
+ El condicional if.
+\end_layout
+
+\begin_layout Subsection
+If, else, elsif.
+\end_layout
+
+\begin_layout Standard
+Iniciemos con if, esta es la forma básica de if en Ruby.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if expresión
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El código que se encuentra entre 
+\emph on
+if
+\emph default
+ y
+\emph on
+ end
+\emph default
+ se ejecútara si y solo si al evaluar la expresión no se regresa 
+\emph on
+false 
+\emph default
+o 
+\emph on
+nil
+\emph default
+.
+ La expresión debe encontrarse separada del código por alguno de los siguientes
+ tres delimitadores: 
+\end_layout
+
+\begin_layout Itemize
+Un salto de línea
+\end_layout
+
+\begin_layout Itemize
+Un punto y coma (
+\emph on
+;
+\emph default
+)
+\end_layout
+
+\begin_layout Itemize
+La palabra 
+\emph on
+then
+\end_layout
+
+\begin_layout Standard
+Aquí algunos ejemplos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if 6>5
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "Seis es mayor que cinco"
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if x!=8 then x+=1 end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if a>b; puts "a menor que b" end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if x<9 then
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "x es menor a 9"
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En Ruby no es necesario poner nuestra expresión entre paréntesis, para eso
+ contamos con los delimitadores antes mencionados.
+ Así mismo sí es necesario poner la palabra end.
+\end_layout
+
+\begin_layout Standard
+También podemos anidar if.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if a>b then
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "a es mayor que b"
+\end_layout
+
+\begin_layout Plain Layout
+
+   if a<c then
+\end_layout
+
+\begin_layout Plain Layout
+
+      puts "pero a es menor que c"
+\end_layout
+
+\begin_layout Plain Layout
+
+   end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos ahora como funciona el 
+\emph on
+else
+\emph default
+.
+ Else se ejecutará si la condición del if es falsa.
+ Esta es su estructura básica:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if expresión
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando usamos else ya no necesitamos asociarlo con una expresión, debido
+ a que solo de ejecutará si el if no lo hace.
+ También es importante observar que solo usamos un end, no se necesita un
+ end para el if y otro para el else.
+ Un solo end que engloba a ambos.
+ Ahora un ejemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if a>b then
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "a es mayor que b"
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "b es mayor que a"
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pero que pasa cuando queremos evaluar dos o más condiciones.
+ Bueno para eso en Ruby existe 
+\emph on
+elsif
+\emph default
+.
+ Con elsif podemos agregar una o más condiciones que deseamos que sean evaluadas.
+ Elsif es como otro if, así que de igual manera podemos usar los delimitadores
+ ya antes vistos.
+ 
+\end_layout
+
+\begin_layout Standard
+Revisemos la estructura básica si usamos if, elsif y else al mismo tiempo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if expresión1
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+elsif expresión2
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+elsif expresión3
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+elsif expresiónN
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+   código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Revisemos un pequeño ejemplo donde se verifique si x es un número positivo
+ o un número negativo o es cero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if x>0 then
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "x es un número positivo"
+\end_layout
+
+\begin_layout Plain Layout
+
+elsif x<0 then
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "x es un número negativo"
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+   puts "x es cero"
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En Ruby el if es más poderoso, ya que este condicional regresa un valor.
+ El valor que regresa es el de la última expresión de código que fue ejecutado
+ o nil en caso de que no se haya ejecutado nada.
+ Para dejar esto más claro veamos un ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Primera forma
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if letra=='a' then
+\end_layout
+
+\begin_layout Plain Layout
+
+	x=1
+\end_layout
+
+\begin_layout Plain Layout
+
+elsif letra=='b' then
+\end_layout
+
+\begin_layout Plain Layout
+
+	x=2
+\end_layout
+
+\begin_layout Plain Layout
+
+elsif letra=='c' then
+\end_layout
+
+\begin_layout Plain Layout
+
+	x=3
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+	x=4
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Segunda forma, aprovechando el poder de Ruby
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+x = if letra=='a' then 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    elsif letra=='b' then 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    elsif letra=='c' then 3
+\end_layout
+
+\begin_layout Plain Layout
+
+    else 4
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If también se puede usar como modificador, de la siguiente forma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+código if condición
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Ejemplo
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts x if x
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Lo que hace nuestro ejemplo es ver si esta definida la variable x,
+\end_layout
+
+\begin_layout Plain Layout
+
+#y de ser así la imprime.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta forma es recomendable cuando la condición es trivial o por lo general
+ la condición siempre regresa true.
+\end_layout
+
+\begin_layout Subsection
+Case.
+\end_layout
+
+\begin_layout Standard
+El 
+\emph on
+case
+\emph default
+ es muy similar al if.
+ Sirve para verificar una serie de condiciones y se ejecutará la que cumpla
+ con ella.
+ Veamos su estructura elemental.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+case expresion
+\end_layout
+
+\begin_layout Plain Layout
+
+	when expresión1
+\end_layout
+
+\begin_layout Plain Layout
+
+		código
+\end_layout
+
+\begin_layout Plain Layout
+
+	when expresión2
+\end_layout
+
+\begin_layout Plain Layout
+
+		código
+\end_layout
+
+\begin_layout Plain Layout
+
+	when expresión3
+\end_layout
+
+\begin_layout Plain Layout
+
+		código
+\end_layout
+
+\begin_layout Plain Layout
+
+	...
+\end_layout
+
+\begin_layout Plain Layout
+
+	when expresiónN
+\end_layout
+
+\begin_layout Plain Layout
+
+		código
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+		código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El else que ves al final puede ir o no, es opcional.
+ Pero dejame decirte que sí importa el orden.
+ Si vas a utilizar else, ese debe ir al final, después de todas las claúsulas
+ 
+\emph on
+when.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout Standard
+La forma de actuar del case es la siguiente: revisa condición por condición,
+ una a una de manera secuencial y en el momento que alguna cumple, se ejecuta
+ el código y en dado caso de que hubiera más condiciones, estás ya no son
+ consideradas.
+ 
+\end_layout
+
+\begin_layout Standard
+También con el case puedes realizar asignaciones, tal como lo hicimos con
+ el if.
+ Case regresa el último código que ejecuto, en dado caso de que ninguna
+ cláusula when regrese true y no se cuente con un else, el valor que regresará
+ case será nil.
+\end_layout
+
+\begin_layout Standard
+Al igual que con if, puedes usar o no la palabra then.
+ En dado caso de que quieras verificar mas de una condición en un when,
+ puedes utilizar la coma (,) para separar tus condiciones.
+ La coma actuaría como el operador ||.
+\end_layout
+
+\begin_layout Standard
+Veamos algunos ejemplos ya en código.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Esta es una forma de usar el case
+\end_layout
+
+\begin_layout Plain Layout
+
+case
+\end_layout
+
+\begin_layout Plain Layout
+
+	when x==1
+\end_layout
+
+\begin_layout Plain Layout
+
+		puts "uno"
+\end_layout
+
+\begin_layout Plain Layout
+
+	when x==2
+\end_layout
+
+\begin_layout Plain Layout
+
+		puts "dos"
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Otra forma de utilizarlo
+\end_layout
+
+\begin_layout Plain Layout
+
+numero= case x
+\end_layout
+
+\begin_layout Plain Layout
+
+			when 1 then "uno"
+\end_layout
+
+\begin_layout Plain Layout
+
+			when 2 then "dos"
+\end_layout
+
+\begin_layout Plain Layout
+
+		  end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#También podemos utlizar rangos con el case, 
+\end_layout
+
+\begin_layout Plain Layout
+
+#los rangos los revisaremos con mayor profundidad más adelante
+\end_layout
+
+\begin_layout Plain Layout
+
+case x
+\end_layout
+
+\begin_layout Plain Layout
+
+	when 1..10 then
+\end_layout
+
+\begin_layout Plain Layout
+
+		puts "entre 1 y 10"
+\end_layout
+
+\begin_layout Plain Layout
+
+	when 11..20 then
+\end_layout
+
+\begin_layout Plain Layout
+
+		puts "entre 11 y 20"
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+		puts "no considere ese caso"
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Últimos dos ejemplos
+\end_layout
+
+\begin_layout Plain Layout
+
+a=case 
+\end_layout
+
+\begin_layout Plain Layout
+
+		when x == 1, x == 0 then "equis es uno o cero" 
+\end_layout
+
+\begin_layout Plain Layout
+
+		when x == 2 || x == 3 then "equis es dos o tres"
+\end_layout
+
+\begin_layout Plain Layout
+
+	end
+\end_layout
+
+\begin_layout Plain Layout
+
+numero = case x 
+\end_layout
+
+\begin_layout Plain Layout
+
+				when 1 
+\end_layout
+
+\begin_layout Plain Layout
+
+					"one" 
+\end_layout
+
+\begin_layout Plain Layout
+
+				when 2 then "two" 
+\end_layout
+
+\begin_layout Plain Layout
+
+				when 3; "three" 
+\end_layout
+
+\begin_layout Plain Layout
+
+				else "otro" 
+\end_layout
+
+\begin_layout Plain Layout
+
+			end 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La sentencia case utiliza internamente el operador === para verificar las
+ distintas condiciones.
+ Dentro de la naturaleza orientada a objetos de Ruby, === lo interpreta
+ el objeto que aparece en la condición when.
+ Mira el siguiente código:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts case x 
+\end_layout
+
+\begin_layout Plain Layout
+
+			when String then "es cadena" 
+\end_layout
+
+\begin_layout Plain Layout
+
+			when Numeric then "es número" 
+\end_layout
+
+\begin_layout Plain Layout
+
+			when TrueClass, FalseClass then "es booleano" 
+\end_layout
+
+\begin_layout Plain Layout
+
+			else "es otro" 
+\end_layout
+
+\begin_layout Plain Layout
+
+		end 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Unless.
+\end_layout
+
+\begin_layout Standard
+En Ruby existe una versión contraria al if y esa es el 
+\emph on
+unless
+\emph default
+.
+ El unless ejecutará código solamente si la expresión evaluada regresa un
+ false o un nil.
+\end_layout
+
+\begin_layout Standard
+La sintaxis es muy parecida al if, aunque es importante mencionar que aquí
+ no existe el elsif.
+ Veamos su estructura básica.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Unless básico
+\end_layout
+
+\begin_layout Plain Layout
+
+unless condición
+\end_layout
+
+\begin_layout Plain Layout
+
+	código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Unless con else
+\end_layout
+
+\begin_layout Plain Layout
+
+unless condición
+\end_layout
+
+\begin_layout Plain Layout
+
+	código
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+	código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora un ejemplo para que quede un poco más claro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Mandaremos un mensaje si en número es negativo
+\end_layout
+
+\begin_layout Plain Layout
+
+unless x>-1 then
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts "Ese es un número negativo"
+\end_layout
+
+\begin_layout Plain Layout
+
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts "No es un número negativo"
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como puedes observar es practicamente lo mismo que el if, pero al revés.
+ También puedes usar el unless como modificador, igual que lo platicamos
+ en if.
+ Solo es cosa de comprender como funciona y utilizar nuestro ingenio de
+ programadores para hacer un buen uso de él.
+ 
+\end_layout
+
+\begin_layout Subsection
+Operador ternario.
+\end_layout
+
+\begin_layout Standard
+El operador ternario es una especie de if simplificado y elegante.
+ Hace uso del operador 
+\emph on
+?.
+ 
+\emph default
+Revisemos como funciona.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+condición ? códigosiesverdadero : códigosiesfalso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora un ejemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+puts x>0 ? "Es mayor que cero" :  "Es cero o menor" 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como dijimos simple y elegante.
+ Una manera más de verificar alguna condición.
+\end_layout
+
+\begin_layout Section
+Bucles.
+\end_layout
+
+\begin_layout Subsection
+While.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+While
+\emph default
+ sirve para hacer iteraciones mientras la condición que evaluemos devuelva
+ true, en el momento que deje de serlo termina su ejecución.
+ Esta es su estructura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+while condición do
+\end_layout
+
+\begin_layout Plain Layout
+
+	código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La palabra 
+\emph on
+do
+\emph default
+ es como el then del if.
+ De igual forma puede ir o no, también podemos usar punto y coma o un salto
+ de linea, al igual que en if.
+ Es importante mencionar que el while ejecutará el código mientras la condición
+ que hayamos puestro no regrese false o nil.
+ Para lograr esto nosotros tenemos que cuidar que el loop no se vuelva infinito,
+ debemos de tener mucho cuidado con la condición que pongamos y la forma
+ en que haremos que se cumpla dicha condición.
+ Un ejemplo
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a=0
+\end_layout
+
+\begin_layout Plain Layout
+
+while a<10 do
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts a
+\end_layout
+
+\begin_layout Plain Layout
+
+	a+=1
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprime del 0 al 9,
+\end_layout
+
+\begin_layout Plain Layout
+
+#observemos que nosotros tenemos que indicar como irá cambiando a.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Until.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Until
+\emph default
+ es la versión contraria de while.
+ Ya que la porción de código que esta adentro se ejecuta mientras la condición
+ sea falsa.
+ En el momento en que al evaluar la condición se regrese un true, el bucle
+ se termina y se detiene la ejecución.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Ruby,breaklines=true,showstringspaces=false,tabsize=3"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+until condición do
+\end_layout
+
+\begin_layout Plain Layout
+
+	código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Ejemplo
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+b=10
+\end_layout
+
+\begin_layout Plain Layout
+
+until b==0 do
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts b
+\end_layout
+
+\begin_layout Plain Layout
+
+	b-=1
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprime del 10 al 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+For.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+For
+\emph default
+ sirve para iterar sobre elementos de objetos enumerables, como un array
+ por ejemplo.
+ En cada iteración los elementos realizan las sentencias de código indicadas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for variable in colleción do
+\end_layout
+
+\begin_layout Plain Layout
+
+	código
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Ejemplo
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+numeros=[1,2,3,4,5,6,7,8,9,10]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for numero in numeros do
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts numero
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además de iterar sobre arreglos, podemos iterar sobre objetos hash y acceder
+ a la key y al valor asociado a esa key.
+ Un ejemplo sería:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+calificaciones={
+\end_layout
+
+\begin_layout Plain Layout
+
+	:matematicas=>10,
+\end_layout
+
+\begin_layout Plain Layout
+
+	:ciencia=>6,
+\end_layout
+
+\begin_layout Plain Layout
+
+	:literatura=>9,
+\end_layout
+
+\begin_layout Plain Layout
+
+	:etica=>7
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#En este ejemplo, nuestra key será materia
+\end_layout
+
+\begin_layout Plain Layout
+
+#y el valor será la calificacion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for materia,calificacion in calificaciones
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Iteradores.
+\end_layout
+
+\begin_layout Subsection
+Iteradores.
+\end_layout
+
+\begin_layout Standard
+Iterar significa realizar una acción repetidamente, y en Ruby eso es precisament
+e lo que hacen los iteradores.
+ A los iteradores se les pasa un bloque de código, el cuál estarán ejecutando.
+ 
+\end_layout
+
+\begin_layout Standard
+El iterador más común es 
+\emph on
+each
+\emph default
+.
+ Por ejemplo, si se itera sobre un rango, estaremos realizando la acción
+ indicada en el bloque de código por cada elemento que conforma el rango.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+('a'..'c').each{|letra|
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts  letra.upcase
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el ejemplo anterior, tenemos un rango conformado por las letras a, b
+ y c.
+ El método each recibe un bloque de código en el cuál estamos indicando
+ que cada elemento que conforma ese rango lo llamaremos letra.
+ Y después simplemente imprimiremos cada una de las letras en mayúscula.
+\end_layout
+
+\begin_layout Standard
+Otro iterador en Ruby es el método 
+\emph on
+times
+\emph default
+, el cuál ejecutará n veces una acción que sea indicada en el bloque de
+ código.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#El siguiente código se ejecutará 5 veces
+\end_layout
+
+\begin_layout Plain Layout
+
+5.times{ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts "Es fácil aprender Ruby" 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El iterador 
+\emph on
+upto
+\emph default
+ recibe un número, el cuál será el limite superior del rango sobre el cuál
+ se iterará.
+ Nota que las llaves pueden ser cambiadas por las palabras do y end respectivame
+nte.
+\end_layout
+
+\begin_layout Standard
+Existe el método 
+\emph on
+downto
+\emph default
+, el cuál funciona igual que upto.
+ Solamente que debemos pasarle el limite inferior.
+ Si analizas detenidamente, x.times es equivalente a 0.upto(x-1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Crea un rango de 2 a 5 y cada número se eleva al cuadrado
+\end_layout
+
+\begin_layout Plain Layout
+
+2.upto(5)do |x|
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts x**2
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Conteo regresivo con downto
+\end_layout
+
+\begin_layout Plain Layout
+
+ 10.downto(1){|n|
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts "Quedan #{n} segundos"
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El iterador 
+\emph on
+step 
+\emph default
+es un iterador numérico que recibe un limite superior y como segundo parámetro
+ como irá moviendosé a través de ese rango creado.
+ En el ejemplo iremos de 0 a 1, moviéndonos de 0.1 en 0.1 a través del rango.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+0.step(1,0.1) { |n|
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts n 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Objetos enumerables.
+ 
+\end_layout
+
+\begin_layout Standard
+Clases como Array, Hash y Range, entre otras, tienen definido un iterador
+ each.
+ Esto los convierte en objetos enumerables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[1,2,3,4,5].each{|n|
+\end_layout
+
+\begin_layout Plain Layout
+
+	puts n 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además del iterador each, existen otros métodos que están definidos en el
+ módulo 
+\emph on
+Enumerable.
+ 
+\emph default
+Algunos de estos métodos son: 
+\emph on
+collect
+\emph default
+, 
+\emph on
+select
+\emph default
+, 
+\emph on
+reject
+\emph default
+ e 
+\emph on
+inject
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+El método collect ejecuta el bloque de código asociado a cada elemento del
+ objeto enumerable, cuando finailza regresa en un array los resultados de
+ cada iteración.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+doble = [1,2,3,4,5,6].collect{|x| 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	x*2 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+print doble
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprime [2,4,6,8,10,12]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El método select regresa solo aquellos elementos que después de ser evaluados
+ regresen algo diferente a false o nil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+pares = (1..10).select{|x|
+\end_layout
+
+\begin_layout Plain Layout
+
+	x%2==0
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+print pares
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprime [2,4,6,8,10]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El método reject es lo opuesto al método select.
+ Reject regresará un arreglo con los elementos que en bloque sean evaluados
+ como false o nil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+impares = (1..10).reject{|x|
+\end_layout
+
+\begin_layout Plain Layout
+
+	x%2==0 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+print impares
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprime [1,3,5,7,9]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El método inject es un poco diferente a los que hemos visto anteriormente.
+ En este método el bloque trabaja con dos argumentos, el primero de ellos
+ es una variable en la que se ira acumulando el valor obtenido de las anteriores
+ iteraciones.
+ Y el segundo elemento es la variable que hace referencia al siguiente valor
+ de la iteración.
+ Así mismo, el método inject puede recibir un valor inicial para el primer
+ argumento.
+\end_layout
+
+\begin_layout Section
+Alteradores de control de flujo.
+\end_layout
+
+\begin_layout Standard
+Ruby cuenta con varios alteradores de control de flujo.
+ Estas sentencias son:
+\end_layout
+
+\begin_layout Itemize
+return - Causa que el método termine y regresa un valor
+\end_layout
+
+\begin_layout Itemize
+break - Causa que el programa salga de algún loop
+\end_layout
+
+\begin_layout Itemize
+next - Interrumpe la actual iteración del loop y pasa al inicio de la siguiente
+ iteración
+\end_layout
+
+\begin_layout Itemize
+redo - Reinicia el loop a su primera iteración
+\end_layout
+
+\begin_layout Chapter
+Métodos.
+\end_layout
+
+\begin_layout Standard
+Los métodos son bloques de código que pueden invocarse a partir de un nombre.
+ Estós métodos pueden recibir parámetros de entrada para poder trabajar.
+ 
+\end_layout
+
+\begin_layout Standard
+Para invocar a estos métodos solo se debe especificar su nombre, así como
+ los argumentos que necesita para trabajar.
+ El valor de la última expresión evaluada dentro del método será regresada
+ a quien haya invocado el método.
+\end_layout
+
+\begin_layout Standard
+En muchos lenguaje existen diferencias entre funciones y métodos, en Ruby
+ no hay tal diferencia.
+ Ya que al ser un lenguaje puramente orientado a objetos, todos son métodos
+ aquí.
+\end_layout
+
+\begin_layout Section
+Definiendo métodos
+\end_layout
+
+\begin_layout Standard
+Para definir un método debemos hacer uso de la palabra reservada 
+\emph on
+def
+\emph default
+.
+ Seguido de ella deberemos indicar el nombre del método y finalmente colocar
+ entre paréntesis la lista de parametros que puede recibir o no nuestro
+ método.
+ El cuerpo del método se comprendra por todas aquellas sentencias que queremos
+ que se ejecuten cuando el método sea invocado.
+ Para terminar la definición de nuestro método deberemos ocupar la palabra
+ reservada 
+\emph on
+end
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#Ejemplo de un metodo que recibe dos numeros y los suma
+\end_layout
+
+\begin_layout Plain Layout
+
+def suma(num1,num2)
+\end_layout
+
+\begin_layout Plain Layout
+
+	num1+num2
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Imprimirá en pantalla 43
+\end_layout
+
+\begin_layout Plain Layout
+
+puts suma(30,13) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La palabra reservada return no es obligatoria dentro de la definición del
+ método, ya que recordamos que el valor de regreso puede obtenerse a partir
+ de la última linea ejecutada por el método.
+ Así mismo, en Ruby no debemos de indicar el tipo de dato que va a regresar
+ nuestro método, al igual que tampoco indicamos de que tipo serán los parámetros
+ que va a recibir para su ejecución.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#A continuación un método que hace uso de return
+\end_layout
+
+\begin_layout Plain Layout
+
+def mayor(num1,num2)
+\end_layout
+
+\begin_layout Plain Layout
+
+	if num1>num2
+\end_layout
+
+\begin_layout Plain Layout
+
+		return num1
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+		return num2
+\end_layout
+
+\begin_layout Plain Layout
+
+	end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+puts mayor(10,69) #Imprime el número 69
+\end_layout
+
+\begin_layout Plain Layout
+
+puts mayor(132,68) #Imprime el número 132 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Nomenclatura de métodos
+\end_layout
+
+\begin_layout Standard
+Por convención los nombres de los métodos deben de iniciar con letra minúscula.
+ Si el nombre del método es más largo de una palabra, la convención indica
+ que se deberan de separar las palabras que lo conforman a través de un
+ guión bajo de_esta_forma en lugar de enEstaForma.
+\end_layout
+
+\begin_layout Standard
+Si el método va a regresar un valor booleano de true o false, la convención
+ nos indica que el nombre del método tendrá que terminar con signo de interrogac
+ión.
+ Por ejemplo, el método 
+\emph on
+empty?
+\emph default
+ de los arreglos nos indica si un arreglo esta vació o no.
+\end_layout
+
+\begin_layout Subsection
+Métodos y paréntesis
+\end_layout
+
+\begin_layout Chapter
+Programación Orientada a Objetos.
+\end_layout
+
+\begin_layout Chapter
+Programación funcional.
+\end_layout
+
+\begin_layout Chapter
+I/O y manejo de Archivos.
+\end_layout
+
+\begin_layout Chapter
+Hilos.
+\end_layout
+
+\begin_layout Chapter
+Miscelánea Ruby.
+\end_layout
+
+\begin_layout Chapter
+Gemas.
+\end_layout
+
+\end_body
+\end_document
